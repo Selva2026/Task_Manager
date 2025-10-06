@@ -53,16 +53,17 @@ Supports **user authentication**, **task management**, and **JWT-based secure se
 ## Folder Structure
 
 task-manager/
-├─ server.js ← Backend + serves frontend
-├─ .env
-├─ client/ ← React frontend
-│ ├─ package.json
-│ ├─ index.html
-│ └─ src/
-│ ├─ App.jsx
-│ ├─ api.js
-│ ├─ store.js
-│ └─ slices/
-│ └─ authSlice.js
-└─ README.md
+├─ server.js           # Backend server + serves frontend
+├─ .env                # Environment variables
+├─ package.json        # Backend dependencies & scripts
+├─ client/             # React frontend
+│  ├─ package.json     # Frontend dependencies & scripts
+│  ├─ index.html       # Frontend entry HTML
+│  └─ src/
+│      ├─ App.jsx      # Main React component
+│      ├─ api.js       # Axios API config
+│      ├─ store.js     # Redux store
+│      └─ slices/
+│          └─ authSlice.js  # Redux slice for authentication
+└─ README.md           # Project documentation
 
