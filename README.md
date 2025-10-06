@@ -49,10 +49,3 @@ Supports **user authentication**, **task management**, and **JWT-based secure se
 
 ---
 
-## Installation & Setup
-
-### 1. Clone the repository
-
-```bash
-git clone https://github.com/<your-username>/mini-task-manager.git
-cd mini-task-manager
