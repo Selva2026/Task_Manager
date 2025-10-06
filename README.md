@@ -53,17 +53,31 @@ Supports **user authentication**, **task management**, and **JWT-based secure se
 ## Folder Structure
 
 task-manager/
-├─ server.js           # Backend server + serves frontend
-├─ .env                # Environment variables
-├─ package.json        # Backend dependencies & scripts
-├─ client/             # React frontend
-│  ├─ package.json     # Frontend dependencies & scripts
-│  ├─ index.html       # Frontend entry HTML
+├─ server.js                   # Backend server entry point
+├─ .env                        # Environment variables
+├─ package.json                # Backend dependencies & scripts
+├─ config/
+│  └─ db.js                    # MongoDB connection setup
+├─ controllers/
+│  ├─ authController.js        # Register/Login logic
+│  └─ taskController.js        # CRUD logic for tasks
+├─ routes/
+│  ├─ authRoutes.js            # Authentication routes
+│  └─ taskRoutes.js            # Task routes
+├─ models/
+│  ├─ User.js                  # User schema
+│  └─ Task.js                  # Task schema
+├─ client/                     # React frontend
+│  ├─ package.json             # Frontend dependencies & scripts
+│  ├─ index.html               # Frontend entry HTML
 │  └─ src/
-│      ├─ App.jsx      # Main React component
-│      ├─ api.js       # Axios API config
-│      ├─ store.js     # Redux store
-│      └─ slices/
-│          └─ authSlice.js  # Redux slice for authentication
-└─ README.md           # Project documentation
-
+│      ├─ App.jsx              # Main React component
+│      ├─ api.js               # Axios API config
+│      ├─ store.js             # Redux store
+│      ├─ slices/
+│      │   ├─ authSlice.js     # Redux slice for authentication
+│      │   └─ taskSlice.js     # Redux slice for tasks
+│      └─ components/
+│          ├─ AuthPage.jsx     # Login/Register UI
+│          └─ TasksPage.jsx    # Task list & actions UI
+└─ README.md                   # Project documentation
