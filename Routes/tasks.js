@@ -1,6 +1,6 @@
 import express from "express";
 import Task from "../Model/Task.js";
-import auth from "../middleware/auth.js";
+import auth from "../Middleware/auth.js";
 
 const router = express.Router();
 
@@ -62,3 +62,4 @@ router.delete("/:id", async (req, res) => {
 });
 
 export default router;
+
